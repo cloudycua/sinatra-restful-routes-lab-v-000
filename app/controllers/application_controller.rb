@@ -8,12 +8,12 @@ class ApplicationController < Sinatra::Base
     redirect to "/recipes"
   end
 
-  get "/recipes" do #loads index page
+  get "/recipes" do  #loads index page
     @recipes = Recipe.all
     erb :index
   end
 
-  get "/recipes/new" do #loads new form
+  get "/recipes/new" do  #loads new form
     erb :new
   end
 
@@ -27,7 +27,7 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
-  get "/recipes/:id/edit" do #loads edit form
+  get "/recipes/:id/edit" do  #loads edit form
     @recipe = Recipe.find_by_id(params[:id])
     erb :edit
   end
