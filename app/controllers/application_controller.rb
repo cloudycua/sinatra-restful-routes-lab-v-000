@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
-  get "/" do
+  get "/" do  #loads index page
     redirect to "/recipes"
   end
 
